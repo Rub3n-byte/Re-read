@@ -4,8 +4,107 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/styles.css">
+    <style>
+        h1.d_one {
+            color: #000000;
+            font-size: 2.5em;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+        }
+        p.d_one {
+            color: #000000;
+            font-size: 1.5em;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+        }
+    </style>
 </head>
 <body>
-    
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <h1>Re-Read</h1>
+    <div id="d_arriba" class="d_one">
+        <h1 class="d_one">Re-Read</h1>
+        <p class="d_one">En Re-Read podrás encontrar libros de segunda mano en perfecto estado. También<br> 
+        vender los tuyos. Porque siempre hay libros leídos y libros por leer. Por eso Re-<br>
+        compramos y Re-vendemos para que nunca te quedes sin ninguno de los dos</p>
+    </div>
+    <section id="s_two">
+        <!--Cosas de Bootstrap-->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#">Navbar</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#" onclick="showContent('homeContent')">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" onclick="showContent('linkContent')">Link</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Dropdown
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#" onclick="showContent('actionContent')">Action</a>
+                            <a class="dropdown-item" href="#">Another action</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Something else here</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" href="#">Disabled</a>
+                    </li>
+                </ul>
+                <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                </form>
+            </div>
+        </nav>
+        <!--Fin de cosas de Bootstrap-->
+        <!-- Contenidos dinámicos -->
+        <div id="homeContent" class="content">
+            <h1 style="font-weight: bold;">"Nunca la lectura ha sido tan necesaria"</h1>
+            <p>En estos tiempos difíciles, Re-Read se suma al mensaje de #yomequedoencasa <br>
+            por el bien común de la sociedad.</p>
+            <h1 style="font-weight: bold;">Reduce & Reuse & Read</h1>
+            <p>Somos la librería Eco-Friendly: Re-Read nació pensando en verde con el <br>
+            objetivo de compartir una pasión, la lectura, y para expresar una <br>
+            preocupación: si queremos construir un futuro sostenible, es necesario <br>
+            que reduzcamos el consumo y reutilicemos cuantos más objetos <br>
+            materiales mejor.</p>
+        </div>
+        <div id="linkContent" class="content" style="display: none;">
+            <p>Este es el contenido de la pestaña "Link".</p>
+        </div>
+        <div id="actionContent" class="content" style="display: none;">
+            <p>Este es el contenido de la acción seleccionada.</p>
+        </div>
+        
+        <!--Javascript de Bootstrap-->
+        <script>
+            function showContent(contentId) {
+                // Oculta todos los contenidos
+                const contents = document.querySelectorAll('.content');
+                contents.forEach(content => content.style.display = 'none');
+                
+                // Muestra el contenido correspondiente
+                document.getElementById(contentId).style.display = 'block';
+            }
+        </script>
+        <!--Fin de Javascript de Bootstrap-->
+    </section>
 </body>
 </html>
