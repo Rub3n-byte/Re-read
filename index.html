@@ -21,6 +21,13 @@
             display: flex;
             justify-content: center;
         }
+        #s_two {
+            display: flex;
+            flex-wrap: nowrap;
+        }
+        .d_two {
+            width: 100%;
+        }
     </style>
 </head>
 <body>
@@ -37,74 +44,78 @@
         compramos y Re-vendemos para que nunca te quedes sin ninguno de los dos</p>
     </div>
     <section id="s_two">
-        <!--Cosas de Bootstrap-->
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <a class="navbar-brand" href="#">Navbar</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-        
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#" onclick="showContent('homeContent')">Home <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#" onclick="showContent('linkContent')">Link</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Dropdown
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="#" onclick="showContent('actionContent')">Action</a>
-                            <a class="dropdown-item" href="#">Another action</a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="#">Something else here</a>
-                        </div>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link disabled" href="#">Disabled</a>
-                    </li>
-                </ul>
-                <form class="form-inline my-2 my-lg-0">
-                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-                </form>
+        <!--Inicio del div de la izquierda-->
+        <div id="d_two_izquierda" class="d_two">
+            <!--Cosas de Bootstrap-->
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#" onclick="showContent('homeContent')">Re-Read <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" onclick="showContent('linkContent')">Link</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" onclick="showContent('ebooksContent')">eBooks</a>
+                        </li>
+                    </ul>
+                    <form class="form-inline my-2 my-lg-0">
+                        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                    </form>
+                </div>
+            </nav>
+            <!--Fin de cosas de Bootstrap-->
+
+            <!-- Divs que se mostrarán -->
+            <div id="homeContent" class="content">
+                <h1 style="font-weight: bold;">"Nunca la lectura ha sido tan necesaria"</h1>
+                <p>En estos tiempos difíciles, Re-Read se suma al mensaje de #yomequedoencasa <br>
+                por el bien común de la sociedad.</p>
+                <h1 style="font-weight: bold;">Reduce & Reuse & Read</h1>
+                <p>Somos la librería Eco-Friendly: Re-Read nació pensando en verde con el <br>
+                objetivo de compartir una pasión, la lectura, y para expresar una <br>
+                preocupación: si queremos construir un futuro sostenible, es necesario <br>
+                que reduzcamos el consumo y reutilicemos cuantos más objetos <br>
+                materiales mejor.</p>
             </div>
-        </nav>
-        <!--Fin de cosas de Bootstrap-->
-        <!-- Contenidos dinámicos -->
-        <div id="homeContent" class="content">
-            <h1 style="font-weight: bold;">"Nunca la lectura ha sido tan necesaria"</h1>
-            <p>En estos tiempos difíciles, Re-Read se suma al mensaje de #yomequedoencasa <br>
-            por el bien común de la sociedad.</p>
-            <h1 style="font-weight: bold;">Reduce & Reuse & Read</h1>
-            <p>Somos la librería Eco-Friendly: Re-Read nació pensando en verde con el <br>
-            objetivo de compartir una pasión, la lectura, y para expresar una <br>
-            preocupación: si queremos construir un futuro sostenible, es necesario <br>
-            que reduzcamos el consumo y reutilicemos cuantos más objetos <br>
-            materiales mejor.</p>
+
+            <div id="linkContent" class="content" style="display: none;">
+                <h1 style="font-weight: bold;">Link</h1>
+                <p>Este es el contenido de la pestaña "Link".</p>
+            </div>
+
+            <div id="ebooksContent" class="content" style="display: none;">
+                <h1 style="font-weight: bold;">eBooks</h1>
+                <p>Aquí puedes explorar nuestra colección de eBooks para disfrutar de la lectura en formato digital.</p>
+            </div>
+
+            <!-- Javascript -->
+            <script>
+                function showContent(contentId) {
+                    // Oculta todos los contenidos
+                    const contents = document.querySelectorAll('.content');
+                    contents.forEach(content => content.style.display = 'none');
+                    
+                    // Muestra el contenido correspondiente
+                    document.getElementById(contentId).style.display = 'block';
+                }
+            </script>
+            <!-- Fin del Javascript -->
         </div>
-        <div id="linkContent" class="content" style="display: none;">
-            <p>Este es el contenido de la pestaña "Link".</p>
+        <!--Inicio del div de la derecha-->
+        <div id="d_two_derecha" class="d_two">
+            <p style="font-size: medium;">Top Ventas</p>
+            <h1 class=¨lista_verde¨>Cien años de soledad</h1>
+            <h1 class=¨lista_verde¨>Cronicas de una muerte anunciada</h1>
+            <h1 class=¨lista_verde¨>El otoño del patriarca</h1>
+            <h1 class=¨lista_verde¨>El general de su laberinto</h1>
         </div>
-        <div id="actionContent" class="content" style="display: none;">
-            <p>Este es el contenido de la acción seleccionada.</p>
-        </div>
-        
-        <!--Javascript de Bootstrap-->
-        <script>
-            function showContent(contentId) {
-                // Oculta todos los contenidos
-                const contents = document.querySelectorAll('.content');
-                contents.forEach(content => content.style.display = 'none');
-                
-                // Muestra el contenido correspondiente
-                document.getElementById(contentId).style.display = 'block';
-            }
-        </script>
-        <!--Fin de Javascript de Bootstrap-->
     </section>
 </body>
 </html>
