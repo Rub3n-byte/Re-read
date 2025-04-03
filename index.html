@@ -9,7 +9,7 @@
     <style>
         h1.d_one {
             color: #000000;
-            font-size: 2.5em;
+            font-size: 4em;
             text-align: center;
             display: flex;
             justify-content: center;
@@ -20,6 +20,8 @@
             text-align: center;
             display: flex;
             justify-content: center;
+            margin-top: 3%;
+            margin-bottom: 5%;
         }
         #s_two {
             display: flex;
@@ -27,6 +29,25 @@
         }
         .d_two {
             width: 100%;
+        }
+        #homeContent {
+            margin-top: 3%;
+            margin-left: 5%;
+        }
+        #linkContent {
+            margin-top: 3%;
+            margin-left: 5%;
+        }
+        #ebooksContent {
+            margin-top: 3%;
+            margin-left: 5%;
+        }
+        .lista_verde {
+            color: white;
+            background-color: #117964;
+            font-size: 1.5em;
+            margin-top: 3%;
+            padding: 3%;
         }
     </style>
 </head>
@@ -51,7 +72,7 @@
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-
+            
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav mr-auto">
                         <li class="nav-item active">
@@ -64,12 +85,8 @@
                             <a class="nav-link" href="#" onclick="showContent('ebooksContent')">eBooks</a>
                         </li>
                     </ul>
-                    <form class="form-inline my-2 my-lg-0">
-                        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-                    </form>
                 </div>
-            </nav>
+            </nav>            
             <!--Fin de cosas de Bootstrap-->
 
             <!-- Divs que se mostrarán -->
@@ -110,11 +127,11 @@
         </div>
         <!--Inicio del div de la derecha-->
         <div id="d_two_derecha" class="d_two">
-            <p style="font-size: medium;">Top Ventas</p>
-            <h1 class=¨lista_verde¨>Cien años de soledad</h1>
-            <h1 class=¨lista_verde¨>Cronicas de una muerte anunciada</h1>
-            <h1 class=¨lista_verde¨>El otoño del patriarca</h1>
-            <h1 class=¨lista_verde¨>El general de su laberinto</h1>
+            <p style="font-size: 1.5em;">Top Ventas</p>
+            <h1 class=lista_verde>Cien años de soledad</h1>
+            <h1 class=lista_verde>Cronicas de una muerte anunciada</h1>
+            <h1 class=lista_verde>El otoño del patriarca</h1>
+            <h1 class=lista_verde>El general de su laberinto</h1>
         </div>
     </section>
 </body>
