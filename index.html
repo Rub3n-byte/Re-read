@@ -41,7 +41,7 @@
             margin-top: 3%;
             margin-left: 5%;
         }
-        #linkContent {
+        #librosContent {
             margin-top: 3%;
             margin-left: 5%;
         }
@@ -55,6 +55,14 @@
             font-size: 1.5em;
             margin-top: 3%;
             padding: 3%;
+        }
+        #d_libros {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 3%;
+        }
+        .libros {
+            flex-basis: 33.33%;
         }
     </style>
 </head>
@@ -86,7 +94,7 @@
                             <a class="nav-link" href="#" onclick="showContent('homeContent')">Re-Read <span class="sr-only">(current)</span></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#" onclick="showContent('linkContent')">Link</a>
+                            <a class="nav-link" href="#" onclick="showContent('librosContent')">Libros</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#" onclick="showContent('ebooksContent')">eBooks</a>
@@ -97,6 +105,7 @@
             <!--Fin de cosas de Bootstrap-->
 
             <!-- Divs que se mostrarán -->
+            <!-- Apartado Re-Read -->
             <div id="homeContent" class="content">
                 <h1 style="font-weight: bold;">"Nunca la lectura ha sido tan necesaria"</h1>
                 <p>En estos tiempos difíciles, Re-Read se suma al mensaje de #yomequedoencasa <br>
@@ -108,12 +117,25 @@
                 que reduzcamos el consumo y reutilicemos cuantos más objetos <br>
                 materiales mejor.</p>
             </div>
-
-            <div id="linkContent" class="content" style="display: none;">
-                <h1 style="font-weight: bold;">Link</h1>
-                <p>Este es el contenido de la pestaña "Link".</p>
+            <!-- Apartado Libros -->
+            <div id="librosContent" class="content" style="display: none;">
+                <h1 style="font-weight: bold;">Todos los libros tienen el mismo precio</h1>
+                <p>Libros casi nuevos a un precio casi imposible</p>
+            <div id="d_libros">
+                <div class="libros">
+                    <img src="img/1-libro-3€.gif">
+                </div>
+                <div class="libros">
+                    <img src="img/2-libros-5€.gif">
+                </div>
+                <div class="libros">
+                    <img src="img/5-libros-10€.gif">
+                </div>
             </div>
-
+            <h1 style="font-weight: bold;">¿Te cambias de piso? ¿Tienes que vaciar la casa? ¿O sencillamente necesitas algo más de espacio?</h1>
+            <p>En Re-Read compramos tus libros para darles una segunda vida. Los compramos todos al mismo precio: 0,20 euros. Siempre hay libros leídos y libros por leer. Por eso Re-compramos y Re-vendemos para que nunca te quedes sin ninguno de los dos.</p>
+            </div>
+            <!-- Apartado eBooks -->
             <div id="ebooksContent" class="content" style="display: none;">
                 <h1 style="font-weight: bold;">eBooks</h1>
                 <p>Aquí puedes explorar nuestra colección de eBooks para disfrutar de la lectura en formato digital.</p>
@@ -126,7 +148,7 @@
                     const contents = document.querySelectorAll('.content');
                     contents.forEach(content => content.style.display = 'none');
                     
-                    // Muestra el contenido correspondiente
+                    // Muestra solo el contenido correspondiente
                     document.getElementById(contentId).style.display = 'block';
                 }
             </script>
