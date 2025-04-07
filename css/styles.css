@@ -120,5 +120,16 @@ p.d_one {
     .navbar .nav-item {
         display: block; /* Asegura que los elementos estén en bloque */
         margin: 10px 0; /* Espaciado vertical entre los enlaces */
-    }    
+    }
+    #navbarSupportedContent {
+        width: 100%;
+        height: 100%;
+        align-items: center;
+        justify-content: center;
+    }
+    a.nav-link {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 }
