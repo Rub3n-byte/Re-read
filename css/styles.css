@@ -1,10 +1,101 @@
-
-
+body, html {
+    width: 100%;
+    height: 100%;
+}
+h1 {
+    font-family: "Oswald", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+#zero {
+    margin-top: 1%;
+    margin-left: 1%;
+    color: white;
+    background-color: #117964;
+}
 h1.d_one {
     color: #000000;
-    font-size: 2.5em;
+    font-size: 4em;
     text-align: center;
-    margin-top: 20px;
     display: flex;
     justify-content: center;
+    margin-top: 5%;
+}
+p.d_one {
+    color: #000000;
+    font-size: 1.5em;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    margin-top: 3%;
+    margin-bottom: 5%;
+}
+#s_two {
+    display: flex;
+    flex-wrap: nowrap;
+}
+.d_two {
+    width: 100%;
+}
+#homeContent {
+    margin-top: 3%;
+    margin-left: 5%;
+}
+#librosContent {
+    margin-top: 3%;
+    margin-left: 5%;
+}
+#ebooksContent {
+    margin-top: 3%;
+    margin-left: 5%;
+}
+.lista_verde {
+    color: white;
+    background-color: #117964;
+    font-size: 1.5em;
+    margin-top: 3%;
+    padding: 3%;
+}
+#d_libros {
+    display: flex;
+    margin-top: 3%;
+    flex-direction: row !important; /* Para prevenir que el media query lo ponga en columnas*/
+}
+.libros {
+    flex-basis: 33.33%;
+}
+#d_ebooks {
+    display: flex;
+    margin-top: 3%;
+    flex-wrap: wrap;
+    text-align: center;
+    gap: 3%;
+}
+.ebooks {
+    flex-basis: 30%;
+}
+.ebooks img {
+    width: 100%;
+    height: auto;
+}
+@media (max-width: 768px) {
+    section {
+        flex-direction: column;
+    }
+    div {
+        flex-direction: column;
+        flex-wrap: nowrap;
+    }
+    #d_two_derecha {
+        margin-left: 5%;
+    }
+    .navbar, .navbar-expand-lg, .navbar-light, .bg-light{
+        margin-left: 5%;
+    }
+    #d_libros {
+        flex-wrap: nowrap !important;
+    }
+    .ebooks {
+        flex-basis: 100%;
+    }
 }
