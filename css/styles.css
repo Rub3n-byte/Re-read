@@ -78,6 +78,19 @@ p.d_one {
     width: 100%;
     height: auto;
 }
+
+/* Navbar */
+.navbar {
+    border-bottom: 3px solid #D25400; /* Línea inferior para la barra */
+}
+
+/* Clase que obtienen la clase seleccionada en la navbar */
+.navbar .nav-item.active .nav-link {
+    background-color: #D25400; /* Fondo del recuadro (gris claro) */
+    color: white;
+    border-radius: 5px; /* Bordes suaves para el recuadro */
+}
+
 @media (max-width: 768px) {
     section {
         flex-direction: column;
@@ -98,4 +111,14 @@ p.d_one {
     .ebooks {
         flex-basis: 100%;
     }
+    .navbar {
+        display: flex;
+        flex-direction: column; /* Organización vertical */
+        align-items: center; /* Centrado horizontal */
+        justify-content: space-between; /* Espaciado uniforme */
+    }
+    .navbar .nav-item {
+        display: block; /* Asegura que los elementos estén en bloque */
+        margin: 10px 0; /* Espaciado vertical entre los enlaces */
+    }    
 }
