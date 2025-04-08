@@ -13,6 +13,7 @@ h1 {
     color: white;
     background-color: #117964;
 }
+/* Texto principal */
 h1.d_one {
     color: #000000;
     font-size: 4em;
@@ -30,6 +31,7 @@ p.d_one {
     margin-top: 3%;
     margin-bottom: 5%;
 }
+/* Seccion a la izquierda */
 #s_two {
     display: flex;
     flex-wrap: nowrap;
@@ -37,32 +39,29 @@ p.d_one {
 .d_two {
     width: 100%;
 }
+/* Re-Read en el navbar */
 #homeContent {
     margin-top: 3%;
     margin-left: 5%;
 }
+
+/* Libros en el navbar */
 #librosContent {
     margin-top: 3%;
     margin-left: 5%;
 }
-#ebooksContent {
-    margin-top: 3%;
-    margin-left: 5%;
-}
-.lista_verde {
-    color: white;
-    background-color: #117964;
-    font-size: 1.5em;
-    margin-top: 3%;
-    padding: 3%;
-}
 #d_libros {
     display: flex;
     margin-top: 3%;
-    flex-direction: row !important; /* Para prevenir que el media query lo ponga en columnas*/
+    flex-direction: row; /* Para prevenir que el media query lo ponga en columnas*/
 }
 .libros {
     flex-basis: 33.33%;
+}
+/* Ebooks en el navbar */
+#ebooksContent {
+    margin-top: 3%;
+    margin-left: 5%;
 }
 #d_ebooks {
     display: flex;
@@ -79,9 +78,22 @@ p.d_one {
     height: auto;
 }
 
+/* Seccion a la derecha, la lista verde */
+.lista_verde {
+    color: white;
+    background-color: #117964;
+    font-size: 1.5em;
+    margin-top: 3%;
+    padding: 3%;
+}
 /* Navbar */
 .navbar {
     border-bottom: 3px solid #D25400; /* Línea inferior para la barra */
+}
+
+ul.navbar-nav {
+    flex-direction: row;
+    flex-wrap: nowrap;
 }
 
 /* Clase que obtienen la clase seleccionada en la navbar */
@@ -91,7 +103,7 @@ p.d_one {
     border-radius: 5px; /* Bordes suaves para el recuadro */
 }
 
-@media (max-width: 768px) {
+@media (max-width: 700px) {
     section {
         flex-direction: column;
     }
@@ -109,13 +121,16 @@ p.d_one {
         flex-wrap: nowrap !important;
     }
     .ebooks {
+        display: flex;
         flex-basis: 100%;
+        width: 100%;
     }
     .navbar {
         display: flex;
-        flex-direction: column; /* Organización vertical */
-        align-items: center; /* Centrado horizontal */
-        justify-content: space-between; /* Espaciado uniforme */
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        justify-content: space-between;
     }
     .navbar .nav-item {
         display: block; /* Asegura que los elementos estén en bloque */
